@@ -1,0 +1,23 @@
+<h2>{{titulo}}</h2>
+
+<!-- PASO 5 -->
+<p>Tenemos las siguientes marcas</p>
+<ul>
+    <li *ngFor="let marca_registradas of marcas">{{marca_registradas}} </li>
+</ul>
+<p>Software Disponible</p>
+<ul>
+    <li *ngFor="let lista_software of software">{{lista_software.nombre}} - 
+              <strong>{{lista_software.precio}}</strong>
+            
+              <span *ngIf="lista_software.precio < 2000"
+                    [style.background] = "lista_software.precio < 2000 ? 'green' : 'transparent'"
+                    [style.color] = "lista_software.precio < 2000 ? 'white' : 'black'"
+              > OFERTA </span>
+            
+    </li>
+
+    
+
+    
+</ul>
