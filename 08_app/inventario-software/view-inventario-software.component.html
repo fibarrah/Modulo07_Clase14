@@ -1,0 +1,19 @@
+<h2>{{titulo}}</h2>
+
+<ul>
+    <li *ngFor="let lista_software of software">{{lista_software.nombre}} - 
+              <strong>{{lista_software.precio}}</strong>
+            
+              <!-- PASO 1 -->
+
+              <span *ngIf="lista_software.precio < 2000"
+                    [style.background] = "lista_software.precio < 2000 ? 'green' : 'transparent'"
+                    [style.color] = "lista_software.precio < 2000 ? 'white' : 'black'"
+              > OFERTA </span>
+            
+    </li>
+
+    
+
+    
+</ul>
